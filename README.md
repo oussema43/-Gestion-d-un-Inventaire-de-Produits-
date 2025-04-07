@@ -1,52 +1,71 @@
-# -Gestion D'un Inventaire de Produits :
-• Afficher un menu principal avec différentes options. 
-• Gérer un inventaire de produits (ajout, suppression, affichage). 
-• Enregistrer les produits dans un fichier texte (.txt) et un fichier CSV (.csv) avec 
-séparateur "," ou ";". 
-• Lire les produits à partir d'un fichier texte ou CSV. 
-• Rechercher un produit par son ID ou son nom. 
-• Afficher les produits disponibles et ceux en rupture de stock.
-1. Menu Principal : L’application doit afficher un menu permettant de : 
-1. Afficher tous les produits. 
-2. Ajouter un nouveau produit. 
-3. Supprimer un produit. 
-4. Rechercher un produit par ID. 
-5. Rechercher un produit par nom. 
-6. Enregistrer l'inventaire dans un fichier texte (.txt). 
-7. Enregistrer l'inventaire dans un fichier CSV (.csv). 
-8. Charger l'inventaire depuis un fichier texte (.txt). 
-9. Charger l'inventaire depuis un fichier CSV (.csv). 
-10. Quitter le programme. 
-L’utilisateur doit pouvoir saisir son choix, et l’application doit exécuter l’action correspondante. 
-2. Gestion des Produits : Chaque produit doit être stocké sous forme de dictionnaire et 
-l’ensemble des produits dans une liste de dictionnaires. Chaque produit est caractérisé 
-par : 
-o ID 
-o Nom 
-o Quantité 
-o Prix unitaire 
-o Statut (Disponible ou Rupture de stock) 
-3. Fonctions à implémenter : 
-o Afficher tous les produits : Affiche tous les produits de l'inventaire. 
-o Ajouter un produit : Permet à l'utilisateur d'ajouter un nouveau produit avec 
-un ID unique, un nom, une quantité et un prix unitaire. Le statut est déterminé 
-automatiquement en fonction de la quantité (Disponible si quantité > 0, sinon 
-Rupture de stock). 
-o Supprimer un produit : Permet à l'utilisateur de supprimer un produit en 
-utilisant son ID. 
-o Rechercher un produit par ID : Permet à l'utilisateur de rechercher un produit 
-par son ID et affiche ses détails. 
-o Rechercher un produit par nom : Permet à l'utilisateur de rechercher un 
-produit par son nom et affiche ses détails. 
-o Enregistrer l'inventaire dans un fichier texte : Enregistre la liste des produits 
-dans un fichier texte (.txt). 
-o Enregistrer l'inventaire dans un fichier CSV : Enregistre la liste des produits 
-dans un fichier CSV (.csv) avec séparateur "," ou ";". 
-o Charger l'inventaire depuis un fichier texte : Charge la liste des produits à 
-partir d'un fichier texte (.txt). 
-o Charger l'inventaire depuis un fichier CSV : Charge la liste des produits à 
-partir d'un fichier CSV (.csv). 
-4. Gestion des fichiers : 
-o Utiliser la clause with pour lire et écrire dans un fichier texte. 
-o Le fichier doit contenir une ligne par produit, avec les informations séparées par 
-des virgules (CSV).
+# 🗃️ Inventory Management System - Python Project
+
+This repository contains a Python-based inventory management application developed as part of the "Programmation Python" coursework for the academic year 2024–2025.
+
+## 📚 Project Description
+
+The goal of this project is to implement a simple yet functional inventory management system using core Python programming concepts such as:
+
+- Control flow (if, elif, else)
+- Loops (`for`, `while`)
+- Functions (with parameters, return values, default values)
+- File handling (`.txt` and `.csv`)
+- Data structures (lists and dictionaries)
+
+## 🛠 Features
+
+The application provides a menu-driven interface for performing the following tasks:
+
+1. Display all products
+2. Add a new product
+3. Delete a product
+4. Search for a product by ID
+5. Search for a product by name
+6. Save inventory to a text file (`.txt`)
+7. Save inventory to a CSV file (`.csv`)
+8. Load inventory from a text file (`.txt`)
+9. Load inventory from a CSV file (`.csv`)
+10. Exit the application
+
+Each product is represented by the following attributes:
+
+- `ID`: Unique identifier
+- `Name`: Product name
+- `Quantity`: Stock quantity
+- `Unit Price`: Price per unit
+- `Status`: Automatically determined based on quantity (`Disponible` if > 0, otherwise `Rupture de stock`)
+
+## 💾 File Management
+
+- Products can be saved and loaded from `.txt` or `.csv` files.
+- CSV files use `,` or `;` as separators.
+- File operations use Python's `with` statement for better handling and safety.
+
+## 👨‍🏫 Supervised by
+
+- **Responsible Instructor**: Ines KAMOUN FOURATI
+- **TP Instructors**: Marwa LOUKIL, Amal BOUDAYA, Yosr GHOZZI, Rahma GHORBEL, Rahme MAALEJ, Sirine MNEJJA, Lassaad ZAWAY
+
+## 👨‍💻 How to Run
+
+1. Make sure Python 3.x is installed.
+2. Open the project in PyCharm or any Python IDE.
+3. Run the script `Gestion_Inventaire.py`.
+4. Follow the on-screen menu instructions.
+
+## 📁 Example Run
+
+```text
+*** Bienvenue dans la Gestion de l'Inventaire ***
+
+1. Afficher tous les produits
+2. Ajouter un nouveau produit
+...
+10. Quitter
+
+Entrez votre choix : 2
+
+Entrez le nom du produit : Laptop
+Entrez la quantité : 10
+Entrez le prix unitaire : 1200
+=> Le produit a été ajouté avec succès !
